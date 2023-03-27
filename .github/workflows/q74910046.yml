@@ -15,4 +15,4 @@ jobs:
     steps:
       - name: context information
         run: |
-          echo '${{ toJSON(job) }}'
+          echo '${{ toJSON(jobs) }}'
