@@ -15,4 +15,4 @@ jobs:
     steps:
       - name: context information
         run: |
-          echo test
+          echo ${{ jobs.test.environment }}
