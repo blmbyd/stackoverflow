@@ -5,16 +5,16 @@ on:
   workflow_dispatch:
   
 env:
-  name: production-74910046
-  url: https://stackoverflow.com/questions/74910046/how-do-i-reference-the-deployment-environment-name-in-github-actions-workflow-ya
+  env_name: production-74910046
+  env_url: https://stackoverflow.com/questions/74910046/how-do-i-reference-the-deployment-environment-name-in-github-actions-workflow-ya
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     environment: 
-      name: ${{ env.name }}
-      url: ${{ env.url }}
+      name: $env_name
+      url: $env_url
     
     steps:
       - name: context information
