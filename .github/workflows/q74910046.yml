@@ -15,4 +15,5 @@ jobs:
     steps:
       - name: context information
         run: |
-          echo ${{ jobs.test.environment }}
+          echo '${{ jobs.test.environment }}'
+          echo '${{ toJSON(job) }}'
