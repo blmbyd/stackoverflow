@@ -1,0 +1,19 @@
+name: question-74910046
+# https://stackoverflow.com/questions/74910046/how-do-i-reference-the-deployment-environment-name-in-github-actions-workflow-ya
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    environment: 
+      name: production-74910046
+      url: https://stackoverflow.com/questions/74910046/how-do-i-reference-the-deployment-environment-name-in-github-actions-workflow-ya
+    
+    steps:
+      - name: context information
+        run: |
+          echo jobs.<job_id>.environment     => ${{ jobs.test.environment }}
+          echo jobs.<job_id>.environment.url => ${{ jobs.test.environment.url }}
