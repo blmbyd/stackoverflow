@@ -15,5 +15,4 @@ jobs:
     steps:
       - name: context information
         run: |
-          echo jobs <job_id> environment     => ${{ jobs.test.environment }}
-          echo jobs <job_id> environment url => ${{ jobs.test.environment.url }}
+          echo test
